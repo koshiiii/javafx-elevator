@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane prefHeight="660.0" prefWidth="920.0" stylesheets="@styles.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sk.koshi.elevator.ElevatorController">
+    <top>
+        <VBox spacing="5.0" styleClass="header">
+            <padding>
+                <Insets bottom="18.0" left="26.0" right="26.0" top="22.0"/>
+            </padding>
+            <Label styleClass="title" text="Riadenie výťahu"/>
+            <Label styleClass="subtitle"
+                   text="Vyberte poschodie. Požiadavky zadané počas jazdy sa zaradia do frontu."/>
+        </VBox>
+    </top>
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="180.0" spacing="9.0" styleClass="control-panel">
+            <padding>
+                <Insets bottom="20.0" left="24.0" right="24.0" top="20.0"/>
+            </padding>
+            <Label styleClass="section-title" text="Poschodia"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="8"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="7"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="6"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="5"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="4"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="3"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="2"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="1"/>
+            <Button maxWidth="Infinity" onAction="#requestFloor" styleClass="floor-button" text="0"/>
+        </VBox>
+    </left>
+
+    <center>
+        <HBox alignment="CENTER" spacing="24.0">
+            <padding>
+                <Insets bottom="20.0" left="22.0" right="26.0" top="20.0"/>
+            </padding>
+
+            <Pane prefHeight="560.0" prefWidth="430.0" styleClass="shaft">
+                <Rectangle arcHeight="18.0" arcWidth="18.0" fill="#172033" height="530.0"
+                           layoutX="40.0" layoutY="15.0" stroke="#334155" strokeWidth="2.0"
+                           width="350.0"/>
+
+                <Line endX="390.0" layoutY="73.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="131.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="189.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="247.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="305.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="363.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="421.0" startX="40.0" stroke="#64748b"/>
+                <Line endX="390.0" layoutY="479.0" startX="40.0" stroke="#64748b"/>
+
+                <Label layoutX="354.0" layoutY="31.0" styleClass="floor-number" text="8"/>
+                <Label layoutX="354.0" layoutY="89.0" styleClass="floor-number" text="7"/>
+                <Label layoutX="354.0" layoutY="147.0" styleClass="floor-number" text="6"/>
+                <Label layoutX="354.0" layoutY="205.0" styleClass="floor-number" text="5"/>
+                <Label layoutX="354.0" layoutY="263.0" styleClass="floor-number" text="4"/>
+                <Label layoutX="354.0" layoutY="321.0" styleClass="floor-number" text="3"/>
+                <Label layoutX="354.0" layoutY="379.0" styleClass="floor-number" text="2"/>
+                <Label layoutX="354.0" layoutY="437.0" styleClass="floor-number" text="1"/>
+                <Label layoutX="354.0" layoutY="495.0" styleClass="floor-number" text="0"/>
+
+                <Rectangle fx:id="elevator" arcHeight="14.0" arcWidth="14.0" fill="#22c55e"
+                           height="42.0" layoutX="116.0" layoutY="490.0"
+                           stroke="#bbf7d0" strokeWidth="2.0" width="185.0"/>
+                <Line endY="35.0" layoutX="208.5" layoutY="493.5" startY="0.0"
+                      stroke="#14532d" strokeWidth="2.0"/>
+            </Pane>
+
+            <VBox prefWidth="230.0" spacing="15.0" styleClass="info-card">
+                <padding>
+                    <Insets bottom="24.0" left="22.0" right="22.0" top="24.0"/>
+                </padding>
+                <Label styleClass="section-title" text="Stav výťahu"/>
+                <Label styleClass="info-caption" text="Aktuálne poschodie"/>
+                <Label fx:id="currentFloorLabel" styleClass="floor-display" text="0"/>
+                <Label styleClass="info-caption" text="Cieľové poschodie"/>
+                <Label fx:id="targetFloorLabel" styleClass="target-display" text="—"/>
+                <Region prefHeight="4.0"/>
+                <Label styleClass="info-caption" text="Front požiadaviek"/>
+                <Label fx:id="queueLabel" styleClass="queue-label" text="prázdny" wrapText="true"/>
+                <Region prefHeight="8.0"/>
+                <Label fx:id="statusLabel" styleClass="status-label" text="Výťah čaká." wrapText="true"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

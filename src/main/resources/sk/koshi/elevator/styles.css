@@ -1,0 +1,107 @@
+.root {
+    -fx-font-family: "Avenir Next", "Segoe UI", sans-serif;
+    -fx-background-color: #eef2f7;
+}
+
+.header {
+    -fx-background-color: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.title {
+    -fx-font-size: 27px;
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+}
+
+.subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #cbd5e1;
+}
+
+.control-panel {
+    -fx-background-color: white;
+    -fx-border-color: transparent #dbe3ee transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+.section-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #172033;
+}
+
+.floor-button {
+    -fx-pref-height: 41px;
+    -fx-background-color: #e8eef7;
+    -fx-background-radius: 10px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 10px;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1e293b;
+    -fx-cursor: hand;
+}
+
+.floor-button:hover {
+    -fx-background-color: #2563eb;
+    -fx-border-color: #2563eb;
+    -fx-text-fill: white;
+}
+
+.floor-button:pressed {
+    -fx-background-color: #1d4ed8;
+}
+
+.shaft {
+    -fx-background-color: #dbe3ee;
+    -fx-background-radius: 20px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 20px;
+}
+
+.floor-number {
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #cbd5e1;
+}
+
+.info-card {
+    -fx-background-color: white;
+    -fx-background-radius: 18px;
+    -fx-border-color: #dbe3ee;
+    -fx-border-radius: 18px;
+}
+
+.info-caption {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #64748b;
+}
+
+.floor-display {
+    -fx-font-size: 54px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #16a34a;
+}
+
+.target-display {
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #2563eb;
+}
+
+.queue-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+}
+
+.status-label {
+    -fx-padding: 14px;
+    -fx-background-color: #eff6ff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #bfdbfe;
+    -fx-border-radius: 12px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1e3a8a;
+}
