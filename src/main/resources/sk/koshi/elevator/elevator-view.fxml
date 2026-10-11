@@ -77,8 +77,6 @@
                 <Rectangle fx:id="elevator" arcHeight="14.0" arcWidth="14.0" fill="#22c55e"
                            height="42.0" layoutX="116.0" layoutY="490.0"
                            stroke="#bbf7d0" strokeWidth="2.0" width="185.0"/>
-                <Line endY="35.0" layoutX="208.5" layoutY="493.5" startY="0.0"
-                      stroke="#14532d" strokeWidth="2.0"/>
             </Pane>
 
             <VBox prefWidth="230.0" spacing="15.0" styleClass="info-card">
